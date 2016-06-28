@@ -1,0 +1,1094 @@
+.ct-chart .ct-label {
+  font-size: 12px;
+  line-height: 1;
+  color: #a3afb7;
+
+  fill: #a3afb7;
+}
+.ct-chart .ct-chart-line .ct-label,
+.ct-chart .ct-chart-bar .ct-label {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:         flex;
+}
+.ct-chart .ct-label.ct-horizontal.ct-start {
+  text-align: center;
+
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: start;
+}
+.ct-chart .ct-label.ct-horizontal.ct-end {
+  text-align: center;
+
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: start;
+}
+.ct-chart .ct-label.ct-vertical.ct-start {
+  text-align: center;
+
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+          justify-content: flex-end;
+  text-anchor: end;
+}
+.ct-chart .ct-label.ct-vertical.ct-end {
+  text-align: center;
+
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: start;
+}
+.ct-chart .ct-chart-bar .ct-label.ct-horizontal.ct-start {
+  text-align: center;
+
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  text-anchor: start;
+}
+.ct-chart .ct-chart-bar .ct-label.ct-horizontal.ct-end {
+  text-align: center;
+
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  text-anchor: start;
+}
+.ct-chart .ct-chart-bar.ct-horizontal-bars .ct-label.ct-horizontal.ct-start {
+  text-align: center;
+
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: start;
+}
+.ct-chart .ct-chart-bar.ct-horizontal-bars .ct-label.ct-horizontal.ct-end {
+  text-align: center;
+
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+          align-items: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: start;
+}
+.ct-chart .ct-chart-bar.ct-horizontal-bars .ct-label.ct-vertical.ct-start {
+  text-align: center;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+          justify-content: flex-end;
+  text-anchor: end;
+}
+.ct-chart .ct-chart-bar.ct-horizontal-bars .ct-label.ct-vertical.ct-end {
+  text-align: center;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+          justify-content: flex-start;
+  text-anchor: end;
+}
+.ct-chart .ct-grid {
+  stroke: rgba(0, 0, 0, .1);
+  stroke-width: 1px;
+}
+.ct-chart .ct-point {
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+.ct-chart .ct-line {
+  fill: none;
+  stroke-width: 3px;
+}
+.ct-chart .ct-area {
+  stroke: none;
+  fill-opacity: .15;
+}
+.ct-chart .ct-bar {
+  fill: none;
+  stroke-width: 10px;
+}
+.ct-chart .ct-slice-donut {
+  fill: none;
+  stroke-width: 60px;
+}
+.ct-chart .ct-series.ct-series-a .ct-point,
+.ct-chart .ct-series.ct-series-a .ct-line,
+.ct-chart .ct-series.ct-series-a .ct-bar,
+.ct-chart .ct-series.ct-series-a .ct-slice-donut {
+  stroke: #62a8ea;
+}
+.ct-chart .ct-series.ct-series-a .ct-slice-pie,
+.ct-chart .ct-series.ct-series-a .ct-area {
+  fill: #62a8ea;
+}
+.ct-chart .ct-series.ct-series-b .ct-point,
+.ct-chart .ct-series.ct-series-b .ct-line,
+.ct-chart .ct-series.ct-series-b .ct-bar,
+.ct-chart .ct-series.ct-series-b .ct-slice-donut {
+  stroke: #7dd3ae;
+}
+.ct-chart .ct-series.ct-series-b .ct-slice-pie,
+.ct-chart .ct-series.ct-series-b .ct-area {
+  fill: #7dd3ae;
+}
+.ct-chart .ct-series.ct-series-c .ct-point,
+.ct-chart .ct-series.ct-series-c .ct-line,
+.ct-chart .ct-series.ct-series-c .ct-bar,
+.ct-chart .ct-series.ct-series-c .ct-slice-donut {
+  stroke: #fa7a7a;
+}
+.ct-chart .ct-series.ct-series-c .ct-slice-pie,
+.ct-chart .ct-series.ct-series-c .ct-area {
+  fill: #fa7a7a;
+}
+.ct-chart .ct-series.ct-series-d .ct-point,
+.ct-chart .ct-series.ct-series-d .ct-line,
+.ct-chart .ct-series.ct-series-d .ct-bar,
+.ct-chart .ct-series.ct-series-d .ct-slice-donut {
+  stroke: #926dde;
+}
+.ct-chart .ct-series.ct-series-d .ct-slice-pie,
+.ct-chart .ct-series.ct-series-d .ct-area {
+  fill: #926dde;
+}
+.ct-chart .ct-series.ct-series-e .ct-point,
+.ct-chart .ct-series.ct-series-e .ct-line,
+.ct-chart .ct-series.ct-series-e .ct-bar,
+.ct-chart .ct-series.ct-series-e .ct-slice-donut {
+  stroke: #f7da64;
+}
+.ct-chart .ct-series.ct-series-e .ct-slice-pie,
+.ct-chart .ct-series.ct-series-e .ct-area {
+  fill: #f7da64;
+}
+.ct-chart .ct-series.ct-series-f .ct-point,
+.ct-chart .ct-series.ct-series-f .ct-line,
+.ct-chart .ct-series.ct-series-f .ct-bar,
+.ct-chart .ct-series.ct-series-f .ct-slice-donut {
+  stroke: #f96197;
+}
+.ct-chart .ct-series.ct-series-f .ct-slice-pie,
+.ct-chart .ct-series.ct-series-f .ct-area {
+  fill: #f96197;
+}
+.ct-chart .ct-series.ct-series-g .ct-point,
+.ct-chart .ct-series.ct-series-g .ct-line,
+.ct-chart .ct-series.ct-series-g .ct-bar,
+.ct-chart .ct-series.ct-series-g .ct-slice-donut {
+  stroke: #9daaf3;
+}
+.ct-chart .ct-series.ct-series-g .ct-slice-pie,
+.ct-chart .ct-series.ct-series-g .ct-area {
+  fill: #9daaf3;
+}
+.ct-chart .ct-series.ct-series-h .ct-point,
+.ct-chart .ct-series.ct-series-h .ct-line,
+.ct-chart .ct-series.ct-series-h .ct-bar,
+.ct-chart .ct-series.ct-series-h .ct-slice-donut {
+  stroke: #83b944;
+}
+.ct-chart .ct-series.ct-series-h .ct-slice-pie,
+.ct-chart .ct-series.ct-series-h .ct-area {
+  fill: #83b944;
+}
+.ct-chart .ct-series.ct-series-i .ct-point,
+.ct-chart .ct-series.ct-series-i .ct-line,
+.ct-chart .ct-series.ct-series-i .ct-bar,
+.ct-chart .ct-series.ct-series-i .ct-slice-donut {
+  stroke: #f6be80;
+}
+.ct-chart .ct-series.ct-series-i .ct-slice-pie,
+.ct-chart .ct-series.ct-series-i .ct-area {
+  fill: #f6be80;
+}
+.ct-chart .ct-series.ct-series-j .ct-point,
+.ct-chart .ct-series.ct-series-j .ct-line,
+.ct-chart .ct-series.ct-series-j .ct-bar,
+.ct-chart .ct-series.ct-series-j .ct-slice-donut {
+  stroke: #9ae1e9;
+}
+.ct-chart .ct-series.ct-series-j .ct-slice-pie,
+.ct-chart .ct-series.ct-series-j .ct-area {
+  fill: #9ae1e9;
+}
+.ct-chart .ct-series.ct-series-k .ct-point,
+.ct-chart .ct-series.ct-series-k .ct-line,
+.ct-chart .ct-series.ct-series-k .ct-bar,
+.ct-chart .ct-series.ct-series-k .ct-slice-donut {
+  stroke: #3aa99e;
+}
+.ct-chart .ct-series.ct-series-k .ct-slice-pie,
+.ct-chart .ct-series.ct-series-k .ct-area {
+  fill: #3aa99e;
+}
+.ct-chart .ct-series.ct-series-l .ct-point,
+.ct-chart .ct-series.ct-series-l .ct-line,
+.ct-chart .ct-series.ct-series-l .ct-bar,
+.ct-chart .ct-series.ct-series-l .ct-slice-donut {
+  stroke: #a17768;
+}
+.ct-chart .ct-series.ct-series-l .ct-slice-pie,
+.ct-chart .ct-series.ct-series-l .ct-area {
+  fill: #a17768;
+}
+.ct-chart .ct-series.ct-series-m .ct-point,
+.ct-chart .ct-series.ct-series-m .ct-line,
+.ct-chart .ct-series.ct-series-m .ct-bar,
+.ct-chart .ct-series.ct-series-m .ct-slice-donut {
+  stroke: #bdbdbd;
+}
+.ct-chart .ct-series.ct-series-m .ct-slice-pie,
+.ct-chart .ct-series.ct-series-m .ct-area {
+  fill: #bdbdbd;
+}
+.ct-chart .ct-series.ct-series-n .ct-point,
+.ct-chart .ct-series.ct-series-n .ct-line,
+.ct-chart .ct-series.ct-series-n .ct-bar,
+.ct-chart .ct-series.ct-series-n .ct-slice-donut {
+  stroke: #76838f;
+}
+.ct-chart .ct-series.ct-series-n .ct-slice-pie,
+.ct-chart .ct-series.ct-series-n .ct-area {
+  fill: #76838f;
+}
+.ct-chart.ct-square {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-square:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 100%;
+  content: "";
+}
+.ct-chart.ct-square:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-square > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-minor-second {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-minor-second:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 93.75%;
+  content: "";
+}
+.ct-chart.ct-minor-second:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-minor-second > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-second {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-second:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 88.88888889%;
+  content: "";
+}
+.ct-chart.ct-major-second:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-second > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-minor-third {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-minor-third:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 83.33333333%;
+  content: "";
+}
+.ct-chart.ct-minor-third:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-minor-third > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-third {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-third:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 80%;
+  content: "";
+}
+.ct-chart.ct-major-third:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-third > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-perfect-fourth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-perfect-fourth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 75%;
+  content: "";
+}
+.ct-chart.ct-perfect-fourth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-perfect-fourth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-perfect-fifth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-perfect-fifth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 66.66666667%;
+  content: "";
+}
+.ct-chart.ct-perfect-fifth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-perfect-fifth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-minor-sixth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-minor-sixth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 62.5%;
+  content: "";
+}
+.ct-chart.ct-minor-sixth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-minor-sixth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-golden-section {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-golden-section:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 61.80469716%;
+  content: "";
+}
+.ct-chart.ct-golden-section:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-golden-section > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-sixth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-sixth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 60%;
+  content: "";
+}
+.ct-chart.ct-major-sixth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-sixth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-minor-seventh {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-minor-seventh:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 56.25%;
+  content: "";
+}
+.ct-chart.ct-minor-seventh:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-minor-seventh > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-seventh {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-seventh:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 53.33333333%;
+  content: "";
+}
+.ct-chart.ct-major-seventh:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-seventh > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-octave {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-octave:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 50%;
+  content: "";
+}
+.ct-chart.ct-octave:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-octave > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-tenth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-tenth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 40%;
+  content: "";
+}
+.ct-chart.ct-major-tenth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-tenth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-eleventh {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-eleventh:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 37.5%;
+  content: "";
+}
+.ct-chart.ct-major-eleventh:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-eleventh > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-major-twelfth {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-major-twelfth:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 33.33333333%;
+  content: "";
+}
+.ct-chart.ct-major-twelfth:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-major-twelfth > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.ct-chart.ct-double-octave {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-double-octave:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  padding-bottom: 25%;
+  content: "";
+}
+.ct-chart.ct-double-octave:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-double-octave > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+//========
+.ct-chart {
+  height: 240px;
+}
+@media (min-width: 992px) {
+  .ct-chart {
+    height: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .ct-chart {
+    height: 280px;
+  }
+}
+#exampleSimplePie.ct-chart .ct-label {
+  font-size: 16px;
+  color: #fff;
+
+  fill: #fff;
+}
+#exampleLineAnimation {
+  height: 300px;
+  background-color: #453d3f;
+}
+.ct-chart.ct-golden-section {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.ct-chart.ct-golden-section:before {
+  display: block;
+  float: left;
+  width: 0;
+  height: 0;
+  /*padding-bottom: 61.804697157%*/
+  padding-bottom: 0;
+  content: "";
+}
+.ct-chart.ct-golden-section:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.ct-chart.ct-golden-section > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+#exampleLineAnimation .ct-label,
+#exampleLineAnimation .ct-label.ct-horizontal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*font-size: .75rem;*/
+  font-size: 13px;
+  color: #94878a;
+  text-align: left;
+
+  fill: #94878a;
+}
+#exampleLineAnimation .ct-label.ct-vertical {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*font-size: .75rem;*/
+  font-size: 13px;
+  color: #94878a;
+  text-align: right;
+
+  fill: #94878a;
+}
+#exampleLineAnimation .ct-grid {
+  stroke: #53494b;
+  stroke-width: 1px;
+  stroke-dasharray: 3px;
+}
+#exampleLineAnimation .ct-point {
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+#exampleLineAnimation .ct-line {
+  fill: none;
+  stroke-width: 4px;
+}
+#exampleLineAnimation .ct-area {
+  stroke: none;
+  fill-opacity: .1;
+}
+#exampleLineAnimation .ct-bar {
+  fill: none;
+  stroke-width: 10px;
+}
+#exampleLineAnimation .ct-slice.ct-donut {
+  fill: none;
+  stroke-width: 60px;
+}
+#exampleLineAnimation .ct-series.ct-series-a .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-a .ct-line,
+#exampleLineAnimation .ct-series.ct-series-a .ct-point,
+#exampleLineAnimation .ct-series.ct-series-a .ct-slice.ct-donut {
+  stroke: #d70206;
+}
+#exampleLineAnimation .ct-series.ct-series-a .ct-area,
+#exampleLineAnimation .ct-series.ct-series-a .ct-slice:not(.ct-donut) {
+  fill: #d70206;
+}
+#exampleLineAnimation .ct-series.ct-series-a .ct-point {
+  stroke-width: 10px;
+  stroke-linecap: square;
+}
+#exampleLineAnimation .ct-series.ct-series-a .ct-line {
+  -webkit-animation: dashoffset 1s linear infinite;
+       -o-animation: dashoffset 1s linear infinite;
+          animation: dashoffset 1s linear infinite;
+
+  fill: none;
+  stroke-width: 4px;
+  stroke-dasharray: 5px;
+}
+#exampleLineAnimation .ct-series.ct-series-b .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-b .ct-line,
+#exampleLineAnimation .ct-series.ct-series-b .ct-point,
+#exampleLineAnimation .ct-series.ct-series-b .ct-slice.ct-donut {
+  stroke: #f05b4f;
+}
+#exampleLineAnimation .ct-series.ct-series-b .ct-area,
+#exampleLineAnimation .ct-series.ct-series-b .ct-slice:not(.ct-donut) {
+  fill: #f05b4f;
+}
+#exampleLineAnimation .ct-series.ct-series-c .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-c .ct-line,
+#exampleLineAnimation .ct-series.ct-series-c .ct-point,
+#exampleLineAnimation .ct-series.ct-series-c .ct-slice.ct-donut {
+  stroke: #f4c63d;
+}
+#exampleLineAnimation .ct-series.ct-series-c .ct-area,
+#exampleLineAnimation .ct-series.ct-series-c .ct-slice:not(.ct-donut) {
+  fill: #f4c63d;
+}
+#exampleLineAnimation .ct-series.ct-series-d .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-d .ct-line,
+#exampleLineAnimation .ct-series.ct-series-d .ct-point,
+#exampleLineAnimation .ct-series.ct-series-d .ct-slice.ct-donut {
+  stroke: #d17905;
+}
+#exampleLineAnimation .ct-series.ct-series-d .ct-area,
+#exampleLineAnimation .ct-series.ct-series-d .ct-slice:not(.ct-donut) {
+  fill: #d17905;
+}
+#exampleLineAnimation .ct-series.ct-series-e .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-e .ct-line,
+#exampleLineAnimation .ct-series.ct-series-e .ct-point,
+#exampleLineAnimation .ct-series.ct-series-e .ct-slice.ct-donut {
+  stroke: #453d3f;
+}
+#exampleLineAnimation .ct-series.ct-series-e .ct-area,
+#exampleLineAnimation .ct-series.ct-series-e .ct-slice:not(.ct-donut) {
+  fill: #453d3f;
+}
+#exampleLineAnimation .ct-series.ct-series-f .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-f .ct-line,
+#exampleLineAnimation .ct-series.ct-series-f .ct-point,
+#exampleLineAnimation .ct-series.ct-series-f .ct-slice.ct-donut {
+  stroke: #59922b;
+}
+#exampleLineAnimation .ct-series.ct-series-f .ct-area,
+#exampleLineAnimation .ct-series.ct-series-f .ct-slice:not(.ct-donut) {
+  fill: #59922b;
+}
+#exampleLineAnimation .ct-series.ct-series-g .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-g .ct-line,
+#exampleLineAnimation .ct-series.ct-series-g .ct-point,
+#exampleLineAnimation .ct-series.ct-series-g .ct-slice.ct-donut {
+  stroke: #0544d3;
+}
+#exampleLineAnimation .ct-series.ct-series-g .ct-area,
+#exampleLineAnimation .ct-series.ct-series-g .ct-slice:not(.ct-donut) {
+  fill: #0544d3;
+}
+#exampleLineAnimation .ct-series.ct-series-h .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-h .ct-line,
+#exampleLineAnimation .ct-series.ct-series-h .ct-point,
+#exampleLineAnimation .ct-series.ct-series-h .ct-slice.ct-donut {
+  stroke: #6b0392;
+}
+#exampleLineAnimation .ct-series.ct-series-h .ct-area,
+#exampleLineAnimation .ct-series.ct-series-h .ct-slice:not(.ct-donut) {
+  fill: #6b0392;
+}
+#exampleLineAnimation .ct-series.ct-series-i .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-i .ct-line,
+#exampleLineAnimation .ct-series.ct-series-i .ct-point,
+#exampleLineAnimation .ct-series.ct-series-i .ct-slice.ct-donut {
+  stroke: #f05b4f;
+}
+#exampleLineAnimation .ct-series.ct-series-i .ct-area,
+#exampleLineAnimation .ct-series.ct-series-i .ct-slice:not(.ct-donut) {
+  fill: #f05b4f;
+}
+#exampleLineAnimation .ct-series.ct-series-j .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-j .ct-line,
+#exampleLineAnimation .ct-series.ct-series-j .ct-point,
+#exampleLineAnimation .ct-series.ct-series-j .ct-slice.ct-donut {
+  stroke: #dda458;
+}
+#exampleLineAnimation .ct-series.ct-series-j .ct-area,
+#exampleLineAnimation .ct-series.ct-series-j .ct-slice:not(.ct-donut) {
+  fill: #dda458;
+}
+#exampleLineAnimation .ct-series.ct-series-k .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-k .ct-line,
+#exampleLineAnimation .ct-series.ct-series-k .ct-point,
+#exampleLineAnimation .ct-series.ct-series-k .ct-slice.ct-donut {
+  stroke: #eacf7d;
+}
+#exampleLineAnimation .ct-series.ct-series-k .ct-area,
+#exampleLineAnimation .ct-series.ct-series-k .ct-slice:not(.ct-donut) {
+  fill: #eacf7d;
+}
+#exampleLineAnimation .ct-series.ct-series-l .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-l .ct-line,
+#exampleLineAnimation .ct-series.ct-series-l .ct-point,
+#exampleLineAnimation .ct-series.ct-series-l .ct-slice.ct-donut {
+  stroke: #86797d;
+}
+#exampleLineAnimation .ct-series.ct-series-l .ct-area,
+#exampleLineAnimation .ct-series.ct-series-l .ct-slice:not(.ct-donut) {
+  fill: #86797d;
+}
+#exampleLineAnimation .ct-series.ct-series-m .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-m .ct-line,
+#exampleLineAnimation .ct-series.ct-series-m .ct-point,
+#exampleLineAnimation .ct-series.ct-series-m .ct-slice.ct-donut {
+  stroke: #b2c326;
+}
+#exampleLineAnimation .ct-series.ct-series-m .ct-area,
+#exampleLineAnimation .ct-series.ct-series-m .ct-slice:not(.ct-donut) {
+  fill: #b2c326;
+}
+#exampleLineAnimation .ct-series.ct-series-n .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-n .ct-line,
+#exampleLineAnimation .ct-series.ct-series-n .ct-point,
+#exampleLineAnimation .ct-series.ct-series-n .ct-slice.ct-donut {
+  stroke: #6188e2;
+}
+#exampleLineAnimation .ct-series.ct-series-n .ct-area,
+#exampleLineAnimation .ct-series.ct-series-n .ct-slice:not(.ct-donut) {
+  fill: #6188e2;
+}
+#exampleLineAnimation .ct-series.ct-series-o .ct-bar,
+#exampleLineAnimation .ct-series.ct-series-o .ct-line,
+#exampleLineAnimation .ct-series.ct-series-o .ct-point,
+#exampleLineAnimation .ct-series.ct-series-o .ct-slice.ct-donut {
+  stroke: #a748ca;
+}
+#exampleLineAnimation .ct-series.ct-series-o .ct-area,
+#exampleLineAnimation .ct-series.ct-series-o .ct-slice:not(.ct-donut) {
+  fill: #a748ca;
+}
+#exampleLineAnimation .ct-point {
+  -webkit-animation: bouncing-stroke .5s ease infinite;
+       -o-animation: bouncing-stroke .5s ease infinite;
+          animation: bouncing-stroke .5s ease infinite;
+}
+#exampleLineAnimation .ct-line {
+  fill: none;
+  stroke-width: 3px;
+}
+#exampleLineAnimation .ct-point {
+  -webkit-animation: exploding-stroke 1s ease-out infinite;
+       -o-animation: exploding-stroke 1s ease-out infinite;
+          animation: exploding-stroke 1s ease-out infinite;
+}
+#exampleLineAnimation .ct-line {
+  fill: none;
+  stroke-width: 2px;
+  stroke-dasharray: 40px 3px;
+}
+#behavior-with-jquery .ct-point {
+  stroke-width: 20px;
+  stroke-linecap: round;
+}
+@-webkit-keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@-o-keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@keyframes dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+@-webkit-keyframes bouncing-stroke {
+  0% {
+    stroke-width: 5px;
+  }
+  50% {
+    stroke-width: 10px;
+  }
+  100% {
+    stroke-width: 5px;
+  }
+}
+@-o-keyframes bouncing-stroke {
+  0% {
+    stroke-width: 5px;
+  }
+  50% {
+    stroke-width: 10px;
+  }
+  100% {
+    stroke-width: 5px;
+  }
+}
+@keyframes bouncing-stroke {
+  0% {
+    stroke-width: 5px;
+  }
+  50% {
+    stroke-width: 10px;
+  }
+  100% {
+    stroke-width: 5px;
+  }
+}
+@-webkit-keyframes exploding-stroke {
+  0% {
+    opacity: 1;
+
+    stroke-width: 2px;
+  }
+  100% {
+    opacity: 0;
+
+    stroke-width: 20px;
+  }
+}
+@-o-keyframes exploding-stroke {
+  0% {
+    opacity: 1;
+
+    stroke-width: 2px;
+  }
+  100% {
+    opacity: 0;
+
+    stroke-width: 20px;
+  }
+}
+@keyframes exploding-stroke {
+  0% {
+    opacity: 1;
+
+    stroke-width: 2px;
+  }
+  100% {
+    opacity: 0;
+
+    stroke-width: 20px;
+  }
+}

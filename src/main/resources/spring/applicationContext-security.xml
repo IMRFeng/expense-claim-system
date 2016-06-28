@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:b="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+	
+	
+	<http pattern="/assets/**" security="none"/>
+	<http pattern="/error/**" security="none"/>
+	<http pattern="/uploadFiles/**" security="none"/>
+	<http pattern="/Login.jsp" security="none"/>
+	<http pattern="/getReceiptThumbnail/**" security="none"/>
+	<http pattern="/getReceipt/**" security="none"/>
+	<http pattern="/addReceipt" security="none"/>
+	<http pattern="/getReceiptImage/**" security="none"/>
+	
+	<!-- Redirects to 403.jsp when access denied -->
+	<http auto-config="true" use-expressions="true" access-denied-page="/error/403.jsp">
+		<!-- Sets up Log on -->
+		<form-login login-page="/Login.jsp" authentication-failure-url="/Login.jsp?sign=BadCredentials" default-target-url="/getReceiptList" login-processing-url="/login" always-use-default-target="true" 
+				authentication-failure-handler-ref="exceptionMappingAuthenticationFailureHandler" />
+		<!-- Manipulates anonymous user access, disable anonymous login here -->
+		<anonymous enabled="false" />
+		<intercept-url pattern="login.do"  access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<!-- Sets up logout -->
+		<logout logout-success-url="/Login.jsp" logout-url="/logout"/>
+		<http-basic />
+		<!-- Adds a customized filter before the filter named FILTER_SECURITY_INTERCEPTOR -->
+		<custom-filter before="FILTER_SECURITY_INTERCEPTOR" ref="customizedFilter" />
+	</http>
+	
+	<!-- Defines a customized filter, must contains three attributes including authenticationManager,accessDecisionManager,securityMetadataSource --> 
+	<b:bean id="customizedFilter" class="com.leyoho.ecs.security.DmsFilterSecurityInterceptor">
+		<b:property name="authenticationManager" ref="authenticationManagerBean" />
+		<b:property name="accessDecisionManager" ref="accessDecisionManagerBean" />
+		<b:property name="securityMetadataSource" ref="securityMetadataSourceBean" />
+	</b:bean>
+
+	<!-- Defines an authentication manager which loads user roles -->
+	<authentication-manager alias="authenticationManagerBean">
+		<authentication-provider ref="authenticationProvider" />
+	</authentication-manager>
+
+	<!-- Defines an authentication provider  -->
+	<b:bean id="authenticationProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<b:property name="userDetailsService" ref="userDetailsService" />
+		<b:property name="hideUserNotFoundExceptions" value="false" />
+		<b:property name="passwordEncoder" ref="passwordEncoder" />
+	</b:bean>
+
+	<b:bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<b:property name="dataSource" ref="dataSource" />
+		<b:property name="usersByUsernameQuery" value="SELECT username, password, enable FROM user WHERE username=? AND enable=true;" />
+		<b:property name="authoritiesByUsernameQuery" value="SELECT u.username username, r.rolename rolename FROM user u, role r, 
+			user_role ur WHERE u.username=? AND u.id = ur.user_id AND ur.role_id = r.id;" />
+	</b:bean>
+
+	<!-- Defines the encryption method of user password -->
+	<b:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+		<b:constructor-arg index="0" value="256" />
+		<b:property name="encodeHashAsBase64" value="true" />
+	</b:bean>
+
+	<!-- Defines an access decision manager, decides whether a user has permits to access certain resources. -->
+	<b:bean id="accessDecisionManagerBean" class="com.leyoho.ecs.security.DmsAccessDecisionManager" >
+		<!-- Protects all resources which are not exposure. The default value is false -->
+		<b:property name="allowIfAllAbstainDecisions" value="false"/>
+	</b:bean>
+
+	<!-- Defines security resources that setting which resources can be accessed by roles -->
+	<b:bean id="securityMetadataSourceBean" class="com.leyoho.ecs.security.DmsInvocationSecurityMetadataSource">
+		<b:constructor-arg index="0" ref="securityJdbcDao" />
+		<b:property name="rejectPublicInvocations" value="true" />
+	</b:bean>
+
+	<!-- Disposes authentication exceptions -->
+	<b:bean id="exceptionMappingAuthenticationFailureHandler" class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
+		<b:property name="exceptionMappings">
+			<b:map>
+				<!-- The user does not exist -->
+				<b:entry key="org.springframework.security.core.userdetails.UsernameNotFoundException" value="/Login.jsp?sign=No User" />
+				<!-- Incorrect credentials or password -->
+				<b:entry key="org.springframework.security.authentication.BadCredentialsException" value="/Login.jsp?sign=Bad Credentials" />
+				<!-- The user disabled -->
+				<b:entry key="org.springframework.security.authentication.DisabledException" value="/Login.jsp?sign=User is disabled" />
+				<!-- Incorrect login authentication credentials -->
+				<b:entry key="org.springframework.security.core.AuthenticationException" value="/Login.jsp?sign=Authentication Failure" />
+			</b:map>
+		</b:property>
+	</b:bean>
+
+	<!-- Lists in secured resources white list via URLs -->
+	<b:bean id="securityMetadataSourceTrustListHolder" class="com.leyoho.ecs.security.util.SMSTrustListHolder" >
+		<b:property name="trustList">
+			<b:list>
+				<b:value>/dashboard</b:value>
+			</b:list>
+		</b:property>
+	</b:bean>
+
+	<!-- Lists white list holders by user name -->
+	<b:bean id="securityUserTrustListHolder" class="com.leyoho.ecs.security.util.SUTrustListHolder" >
+		<b:property name="trustList">
+			<b:list>
+				<b:value>administrator</b:value>
+			</b:list>
+		</b:property>
+	</b:bean>
+
+	<!-- Open up Spring Security3 authentication and logger -->
+	<b:bean class="org.springframework.security.authentication.event.LoggerListener"/>
+	<b:bean class="org.springframework.security.access.event.LoggerListener"/>
+</b:beans>

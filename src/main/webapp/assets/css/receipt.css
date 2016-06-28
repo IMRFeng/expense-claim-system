@@ -1,0 +1,105 @@
+.formSize{
+	margin-top:1%;
+}
+
+.sline{
+	margin:0;
+	display:block;
+	height: 1px;
+    background: #b9b9b9;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #b9b9b9));
+}
+
+.mainHeader{
+	height: auto;
+	text-align: center;
+}
+
+.mainHeader nav ul{
+	list-style: none;
+	margin: 2px auto 2px;
+}
+
+.mainHeader nav ul li{
+	display: inline;
+	font-size:20px;
+	font-family: 'Raleway', sans-serif;
+	padding-left:3%;
+}
+
+body{
+	background:#000040;
+	font-family: 'Lato', sans-serif;
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited{
+	text-shadow: 0px 1px 0px #ffffff;
+	text-decoration:none;
+	color:#545454;
+}
+
+table {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    width: 70%;
+	-webkit-box-shadow: 0px 7px 15px 0px rgba(50, 50, 50, 0.47);
+	-moz-box-shadow:    0px 7px 15px 0px rgba(50, 50, 50, 0.47);
+	box-shadow:         0px 7px 15px 0px rgba(50, 50, 50, 0.47);
+}
+.tableform {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+	overflow:hidden
+}
+
+.tableform td{
+    padding:20px 20px 20px 20px;
+}
+.tableform tr{
+	background-color:white
+}
+
+td {
+	border-bottom: 1px solid #ccc;
+}
+
+td.last{
+	border-bottom: none;
+	-webkit-box-shadow: inset 0px 2px 11px -3px rgba(50, 50, 50, 0.19);
+	-moz-box-shadow:    inset 0px 2px 11px -3px rgba(50, 50, 50, 0.19);
+	box-shadow:         inset 0px 2px 11px -3px rgba(50, 50, 50, 0.19);
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+}
+
+.heading{
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(206,206,206,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(206,206,206,1)));
+	padding:25px 10px;
+	font-weight:bold;
+	text-shadow: 0px 1px 0px #ffffff;
+	color:#646464;
+}
+
+.tableform tr:nth-child(even) {background: #fbfcfd}
+.tableform tr:nth-child(odd) {background: #f5f6f7}
+
+.fa{
+	color:black;
+}
+li.active a {
+    background-color: #014A51;
+	font-family: inherit;
+}
+.logo {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+a {color: #fff;text-decoration: none;outline: none;}
+a:hover {color: #fff;text-decoration: underline;}
+a img {	border: none;}
+dialog {border: 2px solid #000; margin:0 auto; overflow:hidden;}
+dialog.iv-loading {border: 2px solid #f00;}
